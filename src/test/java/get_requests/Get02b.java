@@ -39,5 +39,6 @@ public class Get02b extends ReqresBaseUrl {
         assertEquals("HTTP/1.1 404 Not Found", response.statusLine());
         assertEquals("cloudflare", response.getHeader("Server"));
         assertEquals(2, response.asString().replaceAll("\\s","").length());
+        // Veya assertEquals(0, response.asString().replaceAll("[^A-Za-z0-9]", "").length());
     }
 }
